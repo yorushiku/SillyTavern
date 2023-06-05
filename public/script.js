@@ -7373,6 +7373,7 @@ $(document).ready(function () {
         }
         if (popup_type == "del_ch") {
             handleDeleteCharacter(popup_type, this_chid, characters);
+            eventSource.emit('characterDeleted', {id: this_chid, character: characters[this_chid]});
         }
         if (popup_type == "alternate_greeting" && menu_type !== "create") {
             createOrEditCharacter();
