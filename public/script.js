@@ -530,7 +530,7 @@ const system_messages = {
 };
 
 // Register configuration migrations
-registerPromptManagerMigration();
+registerPromptManagerMigration(saveSettings);
 
 $(document).ajaxError(function myErrorHandler(_, xhr) {
     if (xhr.status == 403) {
